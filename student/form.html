@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEAS • ระบบการคัดเลือกบุคคลเข้าศึกษาต่อระดับอุดมศึกษาแห่งประเทศไทย</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="/assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/forms.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #e9f4ff;">
+    <header class="shadow-sm border-bottom bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light container py-2">
+            
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+                <img src="../assets/images/logo.png" alt="">
+                <!-- <i class="bi bi-mortarboard-fill primary-text fs-3"></i>
+                <div>
+                    <div class="fw-bold">THEAS</div>
+                    <small class="text-muted d-block" style="font-size: 12px;">
+                        ระบบการคัดเลือกบุคคลเข้าศึกษาต่อระดับอุดมศึกษาแห่งประเทศไทย
+                    </small>
+                </div> -->
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            <i class="bi bi-house-door me-1"></i>
+                            หน้าแรก
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#search-box">
+                            <i class="bi bi-mortarboard me-1"></i>
+                            ข้อมูลหลักสูตร
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/universities/">
+                            <i class="bi bi-bank me-1"></i>
+                            ข้อมูลสถาบัน
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-info-circle me-1"></i>
+                            เกี่ยวกับ THEAS
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="primary-btn" href="#">
+                            <i class="bi bi-person-circle me-1"></i>
+                            เข้าสู่ระบบ
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="site-logo">
+            <a href="/">
+                <img src="/assets/images/logo.png" alt="THEAS Logo" width="160">
+            </a>
+        </div>
+
+        <div class="site-body">
+            <div class="ths-form">
+
+                <h1>ลงทะเบียน • เข้าสู่ระบบ</h1>
+
+                <div class="ths-box -info -half" id="statusBox">
+                    กรุณากรอกข้อมูลเพิ่มเติมเพื่อยืนยันตัวตน
+                </div>
+
+                <div class="ths-row">
+
+                    <div class="col required">
+                        <label class="has-meta">
+                            <span>เลขประจำตัว</span>
+                        </label>
+
+                        <input type="text" id="uid" disabled value="">
+                    </div>
+
+                    <div class="col required">
+                        <label class="has-meta">
+                            <span>ชื่อ</span>
+                        </label>
+
+                        <input type="text" id="given-name" disabled value="">
+                    </div>
+
+                    <div class="col required">
+                        <label class="has-meta">
+                            <span>นามสกุล</span>
+                        </label>
+
+                        <input type="text" id="family-name" disabled value="">
+                    </div>
+
+                    <div class="col required">
+                        <label class="has-meta">
+                            <span>รหัสผ่าน</span>
+                        </label>
+
+                        <input type="password"
+                            id="password"
+                            disabled
+                            placeholder="กรอกรหัสผ่าน">
+                    </div>
+
+                </div>
+
+                <div class="action">
+                    <p>
+                        <a class="btn-main cursor-pointer" id="loginBtn">
+                            เข้าสู่ระบบ
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/THEAO.png" alt="THEAO Logo" width="228" height="44">
+        </a>
+        <div class="address"> 
+            <h2>สํานักงานการคัดเลือกบุคคลเข้าศึกษาต่อระดับอุดมศึกษา</h2> 
+            <p>
+                กระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม<br>
+                วันทำการ จันทร์-ศุกร์ เวลา 8.30-16.30 น.
+            </p>
+            <small>
+                <a href="#privacy">เงื่อนไขการใช้งานและนโยบายความเป็นส่วนตัว</a></small> 
+            </div>
+    </footer>
+    
+    <script src="../assets/reg.js"></script>
+    <script src="../assets/date.js"></script>
+    <script src="../assets/universities.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

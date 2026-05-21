@@ -1,0 +1,153 @@
+:root {
+    --s-space: 20px;
+}
+
+input[type=text], input[type=date], input[type=number], input[type=tel], input[type=email], input[type=file], input[type=password], textarea {
+    border: 2px solid #d5d5d7;
+    transition: 0.3s ease;
+    background-size: 30px 20px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+button, select, input, textarea {
+    font-size: 1.125em;
+    padding: 0.474em 0.5em 0.36em;
+    line-height: 1.4;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+input[type=text]:focus-visible, input[type=date]:focus-visible, input[type=number]:focus-visible, input[type=tel]:focus-visible, input[type=email]:focus-visible, input[type=file]:focus-visible, input[type=password]:focus-visible, textarea:focus-visible {
+    border-color: #00a0a9;
+}
+
+.xm-info > h2 {
+    background-color: #4e94eb;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 0;
+    position: relative;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.xm-info .list {
+    background-color: #f3f9ff;
+    background: linear-gradient(180deg, #f3f9ff 0%, #f3f9ff 80%, #ffffff 100%);
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+}
+
+.xm-info .sub {
+    text-align: center;
+}
+
+/* .xm-info .sub h3 {
+    margin: 0;
+} */
+
+.xm-info .action {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.ths-form .action {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ths-form .action {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.xm-box {
+    --xm-border: #556eda;
+    background-color: #fff;
+    position: relative;
+    text-align: left;
+    padding: 16px 16px 16px 28px;
+    line-height: 1.3;
+    border: 1px solid var(--xm-border);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.xm-box .num {
+    position: absolute;
+    background: none;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 32px 32px 0 0;
+    border-color: var(--xm-border) transparent transparent transparent;
+}
+
+.xm-box .num b {
+    position: absolute;
+    left: 6px;
+    top: -30px;
+    z-index: 10;
+    font-size: 14px;
+    color: #fff;
+}
+
+.xm-box ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.xm-box li {
+    list-style: none;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+}
+
+.xm-box .score {
+    margin-bottom: -16px;
+}
+
+.xm-box dl:first-of-type {
+    margin-top: 6px;
+}
+
+.xm-box dl {
+    margin: 0 -16px 0 -28px;
+    padding: 0 0 0 28px;
+    border-top: 1px solid #4e94eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.xm-box dt {
+    padding: 8px 6px 8px 0;
+}
+
+.xm-box dd {
+    margin: 0;
+    padding: 8px 16px 8px 6px;
+    background-color: #e4efff;
+    width: 128px;
+    white-space: nowrap;
+    text-align: right;
+    color: #1a477f;
+    font-size: 0.86em;
+    flex-shrink: 0;
+}
+
+.xm-box dd b {
+    font-size: 1.4em;
+}
+
+.hidden {
+    display: none;
+}
