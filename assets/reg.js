@@ -110,28 +110,19 @@ loginBtn.addEventListener("click", () => {
 
         method: "POST",
 
-        headers: {
-            "Content-Type": "application/json"
-        },
-
         body: JSON.stringify({
-
             uid: uidInput.value,
-            firstName: firstNameInput.value,
-            lastName: lastNameInput.value,
             password: password
-
         })
 
     })
 
     .then(res => res.json())
-
     .then(data => {
 
         if (data.status) {
 
-            /* บันทึก localStorage */
+            // บันทึกข้อมูลลง localStorage
             localStorage.setItem("user", JSON.stringify({
 
                 uid: uidInput.value,
@@ -140,7 +131,7 @@ loginBtn.addEventListener("click", () => {
 
             }));
 
-            /* ไปหน้าโปรไฟล์ */
+            // ไปหน้า profile
             window.location.href = "profile.html";
 
         } else {
@@ -148,13 +139,6 @@ loginBtn.addEventListener("click", () => {
             alert("เข้าสู่ระบบไม่สำเร็จ");
 
         }
-
-    })
-
-    .catch(err => {
-
-        console.error(err);
-        alert("เกิดข้อผิดพลาด");
 
     });
 
