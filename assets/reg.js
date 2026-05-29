@@ -19,35 +19,53 @@ passwordInput.disabled = true;
 if (uid) {
 
     fetch(`${SCRIPT_URL}?value=${uid}`)
+
         .then(res => res.json())
+
         .then(data => {
 
             if (data.status) {
 
                 uidInput.value = data.uid;
 
-                // ถ้ามีชื่อ
+                /* เปิดช่องรหัสผ่าน */
+                passwordInput.disabled = false;
+
+                /* ชื่อ */
                 if (data.firstName) {
 
                     firstNameInput.value = data.firstName;
+
+                    // มีข้อมูล -> ล็อก
+                    firstNameInput.disabled = true;
+
+                } else {
+
+                    // ไม่มีข้อมูล -> ให้กรอก
                     firstNameInput.disabled = false;
 
                 }
 
-                // ถ้ามีนามสกุล
+                /* นามสกุล */
                 if (data.lastName) {
 
                     lastNameInput.value = data.lastName;
+
+                    // มีข้อมูล -> ล็อก
+                    lastNameInput.disabled = true;
+
+                } else {
+
+                    // ไม่มีข้อมูล -> ให้กรอก
                     lastNameInput.disabled = false;
 
                 }
 
-                // เปิดกรอกรหัสผ่าน
-                passwordInput.disabled = false;
-
                 statusBox.innerHTML = `
                     พบข้อมูลผู้ใช้แล้ว กรุณากรอกรหัสผ่าน
                 `;
+
+                statusBox.classList.remove("errorBox");
 
             } else {
 
@@ -97,8 +115,12 @@ loginBtn.addEventListener("click", () => {
         },
 
         body: JSON.stringify({
+
             uid: uidInput.value,
+            firstName: firstNameInput.value,
+            lastName: lastNameInput.value,
             password: password
+
         })
 
     })
@@ -109,7 +131,7 @@ loginBtn.addEventListener("click", () => {
 
         if (data.status) {
 
-            // บันทึกข้อมูล
+            /* บันทึก localStorage */
             localStorage.setItem("user", JSON.stringify({
 
                 uid: uidInput.value,
@@ -118,7 +140,7 @@ loginBtn.addEventListener("click", () => {
 
             }));
 
-            // ไปหน้า profile
+            /* ไปหน้าโปรไฟล์ */
             window.location.href = "profile.html";
 
         } else {
